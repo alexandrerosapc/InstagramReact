@@ -1,3 +1,4 @@
+import SotriesItem from "./StoriesItem";
 export default function Stories() {
   const storiesInfo = [
     { imagem: "img/9gag.svg", perfil: "9gag" },
@@ -21,18 +22,6 @@ export default function Stories() {
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
 
-    </div>
-  );
-}
-
-function SotriesItem(props) {
-  return (
-    <div>
-
-      <div className="story">
-        <img src={props.imagem} alt={props.perfil} />
-      </div>
-      {props.perfil}
     </div>
   );
 }

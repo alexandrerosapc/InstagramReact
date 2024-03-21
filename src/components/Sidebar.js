@@ -1,3 +1,4 @@
+import OutrasSugestoes from "./OutrasSugestoes";
 export default function Sidebar() {
   const outrasInfo = [
     { imagem: "img/bad.vibes.memes.svg", perfil: "bad.vibes.memes" },
@@ -33,21 +34,6 @@ export default function Sidebar() {
         </p>
         <p>© 2021 INSTAGRAM DO FACEBOOK</p>
       </div>
-    </div>
-  );
-}
-
-function OutrasSugestoes(props) {
-  return (
-    <div className="outrassugestoes">
-      <div className="img-cont">
-        <img src={props.imagem} alt="" />
-        <div className="conteudo">
-          <h1>{props.perfil}</h1>
-          <h2>Segue você</h2>
-        </div>
-      </div>
-      <div className="seguir">Seguir</div>
     </div>
   );
 }
