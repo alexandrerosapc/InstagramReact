@@ -1,4 +1,12 @@
 export default function Sidebar() {
+  const outrasInfo = [
+    { imagem: "img/bad.vibes.memes.svg", perfil: "bad.vibes.memes" },
+    { imagem: "img/chibirdart.svg", perfil: "chibirdart" },
+    { imagem: "img/razoesparaacreditar.svg", perfil: "razoesparaacreditar" },
+    { imagem: "img/adorable_animals.svg", perfil: "adorable_animals" },
+    { imagem: "img/smallcutecats.svg", perfil: "smallcutecats" }
+  ]
+
   return (
     <div className="sidebar">
       <div className="catana">
@@ -15,12 +23,7 @@ export default function Sidebar() {
           <p>Ver tudo</p>
         </div>
         <div>
-            <OutrasSugestoes imagem="img/bad.vibes.memes.svg" perfil="bad.vibes.memes" />
-            <OutrasSugestoes imagem="img/chibirdart.svg" perfil="chibirdart" />
-            <OutrasSugestoes imagem="img/razoesparaacreditar.svg" perfil="razoesparaacreditar" />
-            <OutrasSugestoes imagem="img/adorable_animals.svg" perfil="adorable_animals" />
-            <OutrasSugestoes imagem="img/smallcutecats.svg" perfil="smallcutecats" />
-          
+          {outrasInfo.map((o) => <OutrasSugestoes imagem={o.imagem} perfil={o.perfil} />)}
         </div>
       </div>
       <div className="sobre">
