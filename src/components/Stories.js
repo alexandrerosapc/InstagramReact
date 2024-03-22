@@ -11,17 +11,18 @@ export default function Stories() {
     { imagem: "img/memeriagourmet.svg", perfil: "memeriagourmet" },
     { imagem: "img/9gag.svg", perfil: "9gag" },
     { imagem: "img/9gag.svg", perfil: "9gag" },
-    { imagem: "img/9gag.svg", perfil: "9gag" }
-  ]
+    { imagem: "img/9gag.svg", perfil: "9gag" },
+  ];
 
   return (
     <div className="stories">
-      {storiesInfo.map((s) => <SotriesItem imagem={s.imagem} perfil={s.perfil} />)}
+      {storiesInfo.map((s, index) => (
+        <SotriesItem key={index} imagem={s.imagem} perfil={s.perfil} />
+      ))}
 
       <div>
         <ion-icon name="chevron-forward-circle"></ion-icon>
       </div>
-
     </div>
   );
 }

@@ -5,8 +5,8 @@ export default function Sidebar() {
     { imagem: "img/chibirdart.svg", perfil: "chibirdart" },
     { imagem: "img/razoesparaacreditar.svg", perfil: "razoesparaacreditar" },
     { imagem: "img/adorable_animals.svg", perfil: "adorable_animals" },
-    { imagem: "img/smallcutecats.svg", perfil: "smallcutecats" }
-  ]
+    { imagem: "img/smallcutecats.svg", perfil: "smallcutecats" },
+  ];
 
   return (
     <div className="sidebar">
@@ -24,7 +24,13 @@ export default function Sidebar() {
           <p>Ver tudo</p>
         </div>
         <div>
-          {outrasInfo.map((o) => <OutrasSugestoes imagem={o.imagem} perfil={o.perfil} />)}
+          {outrasInfo.map((o) => (
+            <OutrasSugestoes
+              key={o.perfil}
+              imagem={o.imagem}
+              perfil={o.perfil}
+            />
+          ))}
         </div>
       </div>
       <div className="sobre">
