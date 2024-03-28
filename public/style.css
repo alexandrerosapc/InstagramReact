@@ -31,6 +31,11 @@ ion-icon {
   align-items: center;
 }
 
+.container-topo ion-icon{
+  width: 20px;
+  height: 20px;
+}
+
 .mobile {
   display: none;
 }
@@ -157,6 +162,7 @@ ion-icon {
   height: 749px;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 .topo-post {
@@ -207,6 +213,11 @@ ion-icon {
   display: flex;
 }
 
+.simbolos ion-icon{
+  width: 20px;
+  height: 20px;
+}
+
 .simbolos-esquerda > ion-icon {
   margin-right: 10px;
 }
@@ -241,6 +252,10 @@ ion-icon {
   margin: 0 auto;
 }
 
+.name {
+  display: flex;
+}
+
 .catana {
   display: flex;
   align-items: center;
@@ -248,8 +263,11 @@ ion-icon {
   margin-top: 25px;
 }
 
-.catana img {
+.catana > img {
   margin-right: 17px;
+  width: 58px;
+  height: 58px;
+  border-radius: 100%;
 }
 
 .catana h1 {

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import OutrasSugestoes from "./OutrasSugestoes";
+import Usuario from "./Usuario";
 export default function Sidebar() {
   const outrasInfo = [
     { imagem: "img/bad.vibes.memes.svg", perfil: "bad.vibes.memes" },
@@ -8,15 +10,18 @@ export default function Sidebar() {
     { imagem: "img/smallcutecats.svg", perfil: "smallcutecats" },
   ];
 
+  const [name, setName] = useState("Catana");
+  const [image, setImage] = useState("img/catanacomics.svg")
+
   return (
     <div className="sidebar">
-      <div className="catana">
-        <img src="img/catanacomics.svg" alt="" />
-        <div>
-          <h1>catanacomics</h1>
-          <p>Catana</p>
-        </div>
-      </div>
+      <Usuario
+        setName={setName}
+        name={name}
+        setImage={setImage}
+        imagem={image}
+        userName={"catanacomics"}
+      />
       <div className="caixa"></div>
       <div className="sugestoes">
         <div className="sugestoespvc">

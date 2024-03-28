@@ -1,4 +1,5 @@
 import PostItem from "./PostItem";
+
 export default function Posts() {
   const postsInfo = [
     {
@@ -7,6 +8,7 @@ export default function Posts() {
       imagemPost: "img/gato-telefone.svg",
       imagemComentario: "img/respondeai.svg",
       perfilComentario: "respondeai",
+      valorInicialDeLikes: 101523
     },
     {
       imagemPerfil: "img/barked.svg",
@@ -14,6 +16,7 @@ export default function Posts() {
       imagemPost: "img/dog.svg",
       imagemComentario: "img/adorable_animals.svg",
       perfilComentario: "adorable_animals",
+      valorInicialDeLikes: 127692
     },
     {
       imagemPerfil: "img/meowed.svg",
@@ -21,8 +24,10 @@ export default function Posts() {
       imagemPost: "img/gato-telefone.svg",
       imagemComentario: "img/respondeai.svg",
       perfilComentario: "respondeai",
+      valorInicialDeLikes: 73003
     },
   ];
+
   return (
     <div className="posts">
       {postsInfo.map((p, index) => (
@@ -33,6 +38,7 @@ export default function Posts() {
           imagemPost={p.imagemPost}
           imagemComentario={p.imagemComentario}
           perfilComentario={p.perfilComentario}
+          valorInicialDeLikes={p.valorInicialDeLikes}
         />
       ))}
     </div>
